@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+body {
+    background-image: url('../img/fondo-9.png'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    color: rgb(240, 204, 149);
+    
+    /*font-size: clamp(16px,3.5vw,32px);*/
+    padding: 30px;
+    font-family: "SUSE Mono", sans-serif;
+    margin: 0;
+    padding: 0; 
+    
+}
+
+.container {
+    border: #c82333 solid 3px;
+    font-family: "SUSE Mono", sans-serif;
+
+    font-size: clamp(16px,2.5vw,32px);
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: clamp(32px,8vw,64px);
+    border-bottom: 2px solid #ecf0f1;
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: rgb(240, 204, 149);
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 30px 0;
+}
+
+/* Estilos para formularios (aplicados a registro y búsqueda manual) */
+#form-registro div, #formularioMapaManual div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 400px; /* Ancho fijo para inputs de formulario principal */
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    background-color: #f9f9f9; 
+}
+
+/* 🚨 Adaptación para la sección de búsqueda manual */
+/* Esto asegura que los inputs dentro de la sección de mapa se ajusten bien en el diseño flexible */
+#formularioMapaManual input[type="text"] {
+    width: 100%; 
+}
+
+
+/* --- ESTILOS DE BOTONES GENERALES --- */
+
+button {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-right: 10px; 
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #28a745; 
+}
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+#exportarDatos {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #ffc107; 
+    color: #333;
+}
+#exportarDatos:hover {
+    background-color: #e0a800;
+}
+#limpiarDatos {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #dc3545; 
+}
+#limpiarDatos:hover {
+    background-color: #c82333;
+}
+#btnIrMapaManual {
+    background-color: #6f42c1; /* Púrpura para el botón manual de mapa */
+    font-size: clamp(16px,2.5vw,32px);
+    /*height: 40px; /* Alineación vertical con los inputs */
+    line-height: 1;
+}
+#btnIrMapaManual:hover {
+    background-color: #5d35aa;
+}
+
+/* --- ESTILOS DE TABLA Y SCROLL --- */
+
+.tabla-responsive {
+    overflow-x: auto; 
+    margin-bottom: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    min-width: 1200px; /* Ancho mínimo para forzar el scroll */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    
+    color: #1be3c5;
+    font-weight: bold;
+}
+
+td {
+     
+    max-width: 150px; 
+    white-space: normal; 
+    word-break: break-word; 
+}
+
+/* Ajuste para las columnas de acción y mapa */
+#tabla-muestras th:last-child, 
+#tabla-muestras td:last-child {
+    min-width: 180px; 
+    max-width: none; 
+}
+#tabla-muestras th:nth-last-child(2), /* Columna Mapa */
+#tabla-muestras td:nth-last-child(2) {
+    min-width: 130px; 
+    max-width: none; 
+}
+
+.oculto {
+    display: none;
+}
+
+/* --- ESTILOS DE BOTONES EN FILAS --- */
+
+.btn-accion {
+    font-size: 14px; 
+    padding: 5px 10px; 
+    margin: 5px 5px 0 0; 
+    display: inline-block;
+}
+
+.btn-eliminar {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #dc3545;
+}
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+.btn-editar {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #007bff;
+}
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+.btn-mapa {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #00c763; 
+}
+.btn-mapa:hover {
+    background-color: #00aa56;
+}
+
+.btn-guardar-edicion {
+    font-size: clamp(16px,2.5vw,32px);
+    background-color: #28a745;
+}
+.btn-guardar-edicion:hover {
+    background-color: #218838;
+}
+
+.input-edicion {
+    padding: 5px;
+    margin: 0;
+    width: 90%;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#mensaje-vacio {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 15px;
+    border: 1px dashed #ced4da;
+    border-radius: 4px;
+}
+
+/* 1. Definir la animación del color del borde */
+@keyframes animacionBorde {
+    0% {
+        border-color: #ff5733; /* Color inicial (Rojo anaranjado) */
+    }
+    33% {
+        border-color: #33ff5e; /* Color intermedio (Verde brillante) */
+    }
+    66% {
+        border-color: #335eff; /* Otro color (Azul) */
+    }
+    100% {
+        border-color: #ff5733; /* Vuelve al color inicial */
+    }
+}
+
+/* 2. Aplicar la animación al elemento deseado */
+h2 {
+    border: 14px solid #ff5733; /* Importante: Definir el borde inicial y el grosor */
+    padding: 20px;
+    
+    /* Aplicar la animación */
+    animation-name: animacionBorde;
+    animation-duration: 4s; /* Duración total de un ciclo */
+    animation-iteration-count: infinite; /* Para que se repita indefinidamente */
+    animation-timing-function: linear; /* Transición constante (opcional) */
+}
