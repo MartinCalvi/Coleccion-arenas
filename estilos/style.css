@@ -156,7 +156,7 @@ th, td {
     
     padding: 12px;
     border: 1px solid #ddd;
-    text-align: left;
+    /*text-align: left;*/
     vertical-align: top;
 }
 
@@ -171,6 +171,7 @@ td {
     max-width: 150px; 
     white-space: normal; 
     word-break: break-word; 
+    /*text-align: left;*/
 }
 
 
