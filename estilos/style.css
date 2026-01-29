@@ -142,13 +142,18 @@ button[type="submit"]:hover {
 }
 
 table {
+    
     width: 100%;
     min-width: 1200px; /* Ancho mínimo para forzar el scroll */
     border-collapse: collapse;
     margin-top: 15px;
+
+    /* 1. CLAVE: Fuerza a la tabla a respetar los anchos que tú definas */
+    table-layout: fixed;
 }
 
 th, td {
+    
     padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
@@ -156,17 +161,20 @@ th, td {
 }
 
 th {
-    
+    text-align: center;
     color: #1be3c5;
     font-weight: bold;
 }
 
 td {
-     
+    
     max-width: 150px; 
     white-space: normal; 
     word-break: break-word; 
 }
+
+
+
 
 /* Ajuste para las columnas de acción y mapa */
 #tabla-muestras th:last-child, 
@@ -183,6 +191,20 @@ td {
 .oculto {
     display: none;
 }
+
+
+#tabla-muestras th:nth-child(1) { width: 150px; }  /* Nº muestra */
+#tabla-muestras th:nth-child(2) { width: 250px; } /* Coleccionista */
+#tabla-muestras th:nth-child(3) { width: 200px; } /* Localidad */
+#tabla-muestras th:nth-child(4) { width: 200px; } /* Pais */
+#tabla-muestras th:nth-child(5) { width: 240px; } /* Mineralogia (más ancha) */
+#tabla-muestras th:nth-child(6) { width: 250px; } /* Paleontologia (más ancha) */
+#tabla-muestras th:nth-child(7) { width: 200px; } /* Latitud */
+#tabla-muestras th:nth-child(8) { width: 200px; } /* Longitud */
+#tabla-muestras th:nth-child(9) { width: 200px; } /* Botón Mapa */
+#tabla-muestras th:nth-child(10) { width: 200px; } /* Acciones */
+
+
 
 /* --- ESTILOS DE BOTONES EN FILAS --- */
 
@@ -204,6 +226,7 @@ td {
 .btn-editar {
     font-size: clamp(16px,2.5vw,32px);
     background-color: #007bff;
+    margin-bottom: 4px;
 }
 .btn-editar:hover {
     background-color: #0056b3;
